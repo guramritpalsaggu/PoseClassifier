@@ -11,9 +11,9 @@ let poseLabel = "U";
 let result;
 
 function preload(){
-  w = loadImage("w.jpeg");
-  t = loadImage("t.png");
-  u = loadImage("u.jpg")
+  w = loadImage("img/w.jpeg");
+  t = loadImage("img/t.png");
+  u = loadImage("img/u.jpg");
   task = t;
   result = t;
   imgArr.push(w);
@@ -25,7 +25,7 @@ function setup() {
   createCanvas(800, 800);
   video = createCapture(VIDEO);
   video.hide();
-  setInterval(function (){
+  setInterval(function () {
   task = imgArr[Math.floor(Math.random() * imgArr.length)];
   }, 2000);
   poseNet = ml5.poseNet(video, modelLoaded);
